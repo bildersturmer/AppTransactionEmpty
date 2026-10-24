@@ -23,9 +23,9 @@ jobs:
         dotnet new sln --name TestTransactions
         dotnet new wpf -o RecordApp --framework net10.0
         
-        dotnet sln TestTarifffs.slnx add RecordApp/RecordApp.csproj
+        dotnet sln TestTransactions.slnx add RecordApp/RecordApp.csproj
         dotnet new mstest -o RecordApp.Tests --target-framework net10.0
-        dotnet sln TestTarifffs.slnx add RecordApp.Tests/RecordApp.Tests.csproj
+        dotnet sln TestTransactions.slnx add RecordApp.Tests/RecordApp.Tests.csproj
 
     - name: Commit Skeleton Back to GitHub Repo
       run: |
