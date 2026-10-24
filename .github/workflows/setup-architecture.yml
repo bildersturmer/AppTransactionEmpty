@@ -20,8 +20,9 @@ jobs:
 
     - name: Construct Solution and Projects
       run: |
-        dotnet new sln --name TestTarifffs
-        dotnet new wpf -o RecordApp --target-framework net10.0
+        dotnet new sln --name TestTransactions
+        dotnet new wpf -o RecordApp --framework net10.0
+        
         dotnet sln TestTarifffs.slnx add RecordApp/RecordApp.csproj
         dotnet new mstest -o RecordApp.Tests --target-framework net10.0
         dotnet sln TestTarifffs.slnx add RecordApp.Tests/RecordApp.Tests.csproj
