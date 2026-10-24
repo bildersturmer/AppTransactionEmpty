@@ -22,7 +22,7 @@ jobs:
       run: |
         dotnet new sln --name TestTransactions
         dotnet new wpf -o RecordApp --framework net10.0
-        
+
         dotnet sln TestTransactions.slnx add RecordApp/RecordApp.csproj
         dotnet new mstest -o RecordApp.Tests --target-framework net10.0
         dotnet sln TestTransactions.slnx add RecordApp.Tests/RecordApp.Tests.csproj
